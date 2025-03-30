@@ -1,0 +1,176 @@
+.challenge-controls {
+  background-color: rgba(40, 50, 70, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-title {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+/* Declaration display section */
+.declaration-display {
+  background-color: rgba(30, 40, 60, 0.5);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.display-heading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #63b3ed;
+}
+
+.declaration-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.declarer-info {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.declared-hand {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f6e05e;
+}
+
+.declaration-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.preview-card {
+  background-color: white;
+  border-radius: 4px;
+  width: 50px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.preview-card.red {
+  color: #e53e3e;
+}
+
+.preview-card.black {
+  color: #1a202c;
+}
+
+/* Challenge decision section */
+.challenge-decision {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.decision-explanation {
+  background-color: rgba(30, 40, 60, 0.5);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.decision-explanation p {
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.decision-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.probability-hint {
+  color: #9ae6b4;
+  margin-top: 1rem;
+}
+
+.decision-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.challenge-button,
+.pass-button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.challenge-button {
+  background-color: #e53e3e;
+  color: white;
+}
+
+.challenge-button:hover {
+  background-color: #c53030;
+}
+
+.challenge-button:active {
+  transform: translateY(1px);
+}
+
+.pass-button {
+  background-color: #4a5568;
+  color: white;
+}
+
+.pass-button:hover {
+  background-color: #2d3748;
+}
+
+.pass-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .challenge-controls {
+    padding: 1rem;
+  }
+
+  .challenge-title {
+    font-size: 1.3rem;
+  }
+
+  .declared-hand {
+    font-size: 1.3rem;
+  }
+
+  .preview-card {
+    width: 40px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .decision-buttons {
+    flex-direction: column;
+  }
+
+  .challenge-button,
+  .pass-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,667 @@
+.lobby-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.lobby-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(26, 32, 44, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Header section */
+.lobby-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgba(45, 55, 72, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lobby-header h1 {
+  margin: 0;
+  color: #f7fafc;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+.room-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.room-code-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(26, 32, 44, 0.7);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.room-code-label {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.room-code {
+  color: #f7fafc;
+  font-family: monospace;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  color: #4299e1;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  margin-left: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.copy-button:hover {
+  color: #3182ce;
+}
+
+.host-info {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+/* Content section */
+.lobby-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+.lobby-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lobby-sidebar {
+  flex: 1;
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Players list */
+.players-list {
+  background-color: rgba(45, 55, 72, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.players-list h3 {
+  margin-top: 0;
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.player-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: rgba(26, 32, 44, 0.5);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.player-entry:hover {
+  background-color: rgba(26, 32, 44, 0.7);
+}
+
+.player-entry.empty {
+  opacity: 0.6;
+}
+
+.player-name {
+  color: #e2e8f0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.self-indicator {
+  color: #a0aec0;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.host-badge {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.player-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.status-indicator.ready {
+  background-color: #48bb78;
+}
+
+.status-indicator.not-ready {
+  background-color: #ed8936;
+}
+
+.status-indicator.empty {
+  background-color: #a0aec0;
+}
+
+/* Game settings */
+.game-settings {
+  background-color: rgba(45, 55, 72, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.game-settings h3 {
+  margin-top: 0;
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.setting-label {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.setting-value {
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Lobby actions */
+.lobby-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.start-game-button {
+  flex: 2;
+  padding: 1rem;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-game-button:hover {
+  background-color: #38a169;
+}
+
+.start-game-button:disabled {
+  background-color: #718096;
+  cursor: not-allowed;
+}
+
+.leave-room-button {
+  flex: 1;
+  padding: 1rem;
+  background-color: rgba(245, 101, 101, 0.2);
+  color: #f56565;
+  border: 1px solid rgba(245, 101, 101, 0.3);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.leave-room-button:hover {
+  background-color: rgba(245, 101, 101, 0.3);
+}
+
+.waiting-message {
+  padding: 1rem;
+  text-align: center;
+  color: #a0aec0;
+  background-color: rgba(26, 32, 44, 0.3);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Chat container */
+.chat-container {
+  background-color: rgba(45, 55, 72, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 400px;
+}
+
+.chat-container h3 {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-placeholder {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.chat-message {
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(26, 32, 44, 0.5);
+  border-radius: 6px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.chat-message.local {
+  background-color: rgba(66, 153, 225, 0.2);
+  align-self: flex-end;
+}
+
+.message-sender {
+  color: #4299e1;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.message-text {
+  color: #e2e8f0;
+}
+
+.chat-input-form {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  background-color: rgba(26, 32, 44, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px 0 0 6px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #4299e1;
+}
+
+.send-button {
+  padding: 0.75rem 1.25rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #3182ce;
+}
+
+.send-button:disabled {
+  background-color: #718096;
+  cursor: not-allowed;
+}
+
+/* Invite section */
+.invite-section {
+  background-color: rgba(45, 55, 72, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.toggle-invites-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgba(66, 153, 225, 0.2);
+  color: #4299e1;
+  border: 1px solid rgba(66, 153, 225, 0.3);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-invites-button:hover {
+  background-color: rgba(66, 153, 225, 0.3);
+}
+
+.friends-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: rgba(26, 32, 44, 0.3);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.friend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgba(45, 55, 72, 0.5);
+  border-radius: 4px;
+}
+
+.friend-name {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.invite-friend-button {
+  padding: 0.3rem 0.75rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.invite-friend-button:hover {
+  background-color: #3182ce;
+}
+
+.no-friends-message {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* Error container */
+.error-container {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(245, 101, 101, 0.9);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  animation: slideUp 0.3s ease-out;
+}
+
+.error-message {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Countdown overlay */
+.countdown-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.countdown-value {
+  font-size: 6rem;
+  color: white;
+  font-weight: 700;
+  animation: pulse 1s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .lobby-container {
+    max-width: 100%;
+  }
+
+  .lobby-content {
+    flex-direction: column;
+  }
+
+  .lobby-sidebar {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .chat-container {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lobby-screen {
+    padding: 1rem;
+  }
+
+  .lobby-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .room-info {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .room-code-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .settings-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lobby-actions {
+    flex-direction: column;
+  }
+
+  .countdown-value {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .lobby-main,
+  .lobby-sidebar {
+    padding: 0;
+  }
+
+  .players-list,
+  .game-settings,
+  .chat-container,
+  .invite-section {
+    padding: 1rem;
+  }
+
+  .settings-list {
+    gap: 0.75rem;
+  }
+
+  .player-entry {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .countdown-value {
+    font-size: 3rem;
+  }
+}
+
+/* Room sharing styles */
+.room-share {
+  margin-top: 1rem;
+  background-color: rgba(26, 32, 44, 0.7);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.share-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+.share-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.share-url-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.share-link-button {
+  padding: 0.5rem 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.share-link-button:hover {
+  background-color: #3182ce;
+}
+
+.share-info {
+  color: #a0aec0;
+  font-size: 0.85rem;
+  font-style: italic;
+}

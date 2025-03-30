@@ -1,0 +1,237 @@
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(45, 55, 72, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f7fafc;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.game-subtitle {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.username-input {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(160, 174, 192, 0.3);
+  background-color: rgba(26, 32, 44, 0.5);
+  color: #f7fafc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.username-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+}
+
+.username-input.input-error {
+  border-color: #f56565;
+  box-shadow: 0 0 0 2px rgba(245, 101, 101, 0.2);
+}
+
+.error-message {
+  color: #fc8181;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.steam-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(26, 32, 44, 0.3);
+  border-radius: 6px;
+}
+
+.steam-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.steam-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #4299e1;
+}
+
+.login-button {
+  padding: 0.85rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  background-color: #3182ce;
+}
+
+.login-button:disabled {
+  background-color: #718096;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(160, 174, 192, 0.2);
+  color: #a0aec0;
+  font-size: 0.85rem;
+}
+
+.game-version {
+  opacity: 0.8;
+}
+
+.steam-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.steam-status.connected {
+  color: #68d391;
+}
+
+.steam-icon {
+  font-size: 1rem;
+}
+
+/* Background decorations */
+.background-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.card-decoration {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  background-color: white;
+  border-radius: 12px;
+  opacity: 0.05;
+  transform: rotate(0deg);
+}
+
+.card-decoration.hearts {
+  top: 15%;
+  left: 10%;
+  transform: rotate(-15deg);
+}
+
+.card-decoration.spades {
+  top: 60%;
+  left: 20%;
+  transform: rotate(25deg);
+}
+
+.card-decoration.diamonds {
+  top: 10%;
+  right: 15%;
+  transform: rotate(10deg);
+}
+
+.card-decoration.clubs {
+  bottom: 15%;
+  right: 10%;
+  transform: rotate(-20deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .card-decoration {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+  }
+
+  .card-decoration {
+    width: 100px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,359 @@
+/* GameControls.css - Styles for game control components */
+
+/* Declaration Controls */
+.declaration-controls {
+  background-color: rgba(40, 50, 70, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.declaration-title {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.current-declaration {
+  background-color: rgba(30, 40, 60, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.current-declaration .label {
+  font-weight: bold;
+  color: #a0aec0;
+}
+
+.current-declaration .value {
+  font-size: 1.2rem;
+  color: #f6e05e;
+}
+
+.declaration-explanation {
+  margin-bottom: 1.5rem;
+  color: #a0aec0;
+  line-height: 1.5;
+}
+
+.declaration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.declare-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.declare-button:hover {
+  background-color: #3182ce;
+}
+
+.declare-button:active {
+  transform: translateY(1px);
+}
+
+.declare-button:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+.declaration-tips {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(30, 40, 60, 0.3);
+  border-radius: 8px;
+}
+
+.declaration-tips h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #a0aec0;
+}
+
+.declaration-tips ul {
+  margin-left: 1.5rem;
+  color: #a0aec0;
+}
+
+.declaration-tips li {
+  margin-bottom: 0.5rem;
+}
+
+/* Card Selector Component */
+.card-selector-component {
+  background-color: rgba(30, 40, 60, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.hand-type-selection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hand-type-selection label {
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.hand-type-select {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  padding: 0.5rem;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.hand-type-select:focus {
+  outline: none;
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+}
+
+.current-declaration-info {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: rgba(45, 55, 72, 0.5);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.declaration-guidance {
+  color: #a0aec0;
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.selector-container {
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #fc8181;
+  padding: 0.75rem;
+  background-color: rgba(229, 62, 62, 0.1);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Challenge Controls */
+.challenge-controls {
+  background-color: rgba(40, 50, 70, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-title {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.challenge-declaration-display {
+  background-color: rgba(30, 40, 60, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-heading {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
+
+.declaration-details {
+  line-height: 1.5;
+}
+
+.declared-hand {
+  font-size: 1.2rem;
+  color: #f6e05e;
+  margin: 0.5rem 0;
+}
+
+.declaration-cards-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.declaration-card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 40px;
+  height: 60px;
+}
+
+.declaration-card.red {
+  color: #e53e3e;
+}
+
+.declaration-card.black {
+  color: #1a202c;
+}
+
+.challenge-decision {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.challenge-explanation {
+  background-color: rgba(30, 40, 60, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+.challenge-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.challenge-button {
+  flex: 1;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.challenge-button:hover {
+  background-color: #c53030;
+}
+
+.challenge-button:active {
+  transform: translateY(1px);
+}
+
+.pass-button {
+  flex: 1;
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.pass-button:hover {
+  background-color: #2d3748;
+}
+
+.pass-button:active {
+  transform: translateY(1px);
+}
+
+.probability-hint {
+  margin-top: 0.75rem;
+  color: #a0aec0;
+  font-size: 0.95rem;
+}
+
+/* Waiting message */
+.waiting-message {
+  padding: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  color: #a0aec0;
+  background-color: rgba(30, 40, 60, 0.3);
+  border-radius: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .declaration-controls,
+  .challenge-controls {
+    padding: 1rem;
+  }
+
+  .declaration-title,
+  .challenge-title {
+    font-size: 1.3rem;
+  }
+
+  .hand-type-selection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hand-type-selection label {
+    min-width: auto;
+  }
+
+  .hand-type-select {
+    width: 100%;
+  }
+
+  .challenge-buttons {
+    flex-direction: column;
+  }
+
+  .declare-button,
+  .challenge-button,
+  .pass-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .declaration-card {
+    width: 35px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+  .declaration-card.black {
+    color: #1a202c;
+    background-color: #e2e8f0;
+  }
+
+  .declaration-card.red {
+    color: #e53e3e;
+    background-color: #e2e8f0;
+  }
+}

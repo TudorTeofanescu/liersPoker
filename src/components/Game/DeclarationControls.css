@@ -1,0 +1,138 @@
+.declaration-controls {
+  background-color: rgba(40, 50, 70, 0.3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.declaration-title {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.current-declaration {
+  background-color: rgba(30, 40, 60, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.current-declaration .label {
+  font-weight: bold;
+  color: #a0aec0;
+}
+
+.current-declaration .value {
+  font-size: 1.2rem;
+  color: #f6e05e;
+}
+
+.declaration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.hand-type-select {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  padding: 0.5rem;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.hand-type-select:focus {
+  outline: none;
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+}
+
+.card-selection-area {
+  background-color: rgba(30, 40, 60, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #fc8181;
+  padding: 0.75rem;
+  background-color: rgba(229, 62, 62, 0.1);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.declare-button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.declare-button:hover {
+  background-color: #3182ce;
+}
+
+.declare-button:active {
+  transform: translateY(1px);
+}
+
+.declare-button:disabled {
+  background-color: #4a5568;
+  cursor: not-allowed;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .declaration-controls {
+    padding: 1rem;
+  }
+
+  .declaration-title {
+    font-size: 1.3rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    min-width: auto;
+  }
+
+  .hand-type-select {
+    width: 100%;
+  }
+
+  .declare-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
